@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/poynting/purpleair-api/purpleair"
+	"github.com/poynting/purpleair-api-go/purpleair"
 	"github.com/urfave/cli/v2"
 )
 

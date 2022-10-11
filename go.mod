@@ -1,4 +1,4 @@
-module github.com/poynting/purpleair-api
+module github.com/poynting/purpleair-api-go
 
 go 1.19
 
