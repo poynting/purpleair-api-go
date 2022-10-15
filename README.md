@@ -1,39 +1,28 @@
 # purpleair-api-go
 golang client for getting data from the purpleair api
 
-# Setup
-
-Set up the environment. First set up the purpleair API information, and the location and range you want to query.
-The location and range is converted to a bounding box inscribed within a circle of the radius, centered on the location.
-
-```
-PURPLEAIR_READ_KEY = "YOUR-READ-KEY"
-PURPLEAIR_LATITUDE = "33.333"
-PURPLEAIR_LONGITUDE = "-96.666"
-PURPLEAIR_RANGE_KM = "3"
-```
-
-To log to influxdb, set up the information
-
-```
-INFLUXDB_HOST = "localhost"
-INFLUXDB_PORT = "8086"
-INFLUXDB_DB = "purpleair"
-INFLUX_MEASUREMENT_NAME = "purpleair"
-INFLUX_LOCATION_TAG = "home"
-```
-
 # Usage
-
-Log from Purpleair to influx
+The api purpleair module can be standalone. There is also a very basic cli client that shows how to use the data and can output json or push data to an influxdb server.
 
 ```
-go run .\main.go influx
+import github.com/poynting/purpleair-api-go@/purpleair
 ```
 
-Print out sensors measurements from the PA api as json:
+Or install the (very basic) cli using
 ```
-go run .\main.go influx
+go install github.com/poynting/purpleair-api-go@latest 
+```
+Which will put the purpleair-api-go executable in your GOPATH.
+
+## Log from Purpleair to influx
+
+```
+purpleair-api-go influx
+```
+
+## Print out sensors measurements from the PA api as json
+```
+purpleair-api-go influx
 ```
 
 # Dockerfile for balena service
