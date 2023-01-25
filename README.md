@@ -81,6 +81,7 @@ INFLUXDB_PORT = "8086"
 INFLUXDB_DB = "purpleair"
 INFLUX_MEASUREMENT_NAME = "purpleair"
 INFLUX_LOCATION_TAG = "home"
+```
 
 ## Example of aggregating and plotting local sensor data in Grafana
 ![image](https://user-images.githubusercontent.com/6610131/196003936-e27a7be8-32ee-4fa9-b816-21a60c80a358.png)
